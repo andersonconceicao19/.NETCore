@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using apilog.Models;
 using apilog.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace apilog.Controllers
@@ -51,6 +52,26 @@ namespace apilog.Controllers
 
            await _db.Update(user);
             return Ok();
+        }
+
+        [HttpPost("login")]
+        [AllowAnonymous]
+        public IActionResult Authenticate([FromBody]Usuario model)
+        {
+            try
+            {
+              
+                var user = _db.Authenticate(model.Email, model.Password);
+
+                if (user == null)
+                    return BadRequest(new { message = "Usuário ou senha inválidos" });
+
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
     }

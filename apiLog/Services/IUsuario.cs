@@ -12,7 +12,7 @@ namespace apilog.Services
         Task Add(Usuario usuario);
         Task Update(Usuario usuario);
         Task Remove(Guid Id);
-       
+       Usuario Authenticate(string Email, string password);
 
     }
 }
