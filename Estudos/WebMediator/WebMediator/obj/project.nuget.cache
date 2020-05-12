@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "N4hkt9X1IBgs/04Mye+6g2mZtChEI5nJtu5zuQjmKCUbVISVmqB/+P1Zmim+pBHWWFptMtXEDAR4A9NwssHw9Q==",
+  "dgSpecHash": "abT5iTAZfjZgHc8rCRcRI9OMuT0/DM45iIvWER5HsqHCJ/+KUz4ZpyWUF1JTikJgNaWLnJv9QeCIiMFhq/2AVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ander\\Desktop\\.NetCore\\Estudos\\WebMediator\\WebMediator\\WebMediator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ander\\.nuget\\packages\\mediatr\\8.0.1\\mediatr.8.0.1.nupkg.sha512",
+    "C:\\Users\\ander\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.0.0\\mediatr.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\ander\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
