@@ -10,12 +10,13 @@ namespace ProjetoModeloDDD.Infra.Data.Context
 {
     public class ProjetoModeloContext : DbContext
     {
-        //1 hora e 04 min. 
+       
 
         public ProjetoModeloContext()
             : base("ProjetoModeloDDD")
         {
-
+            var ensureDLLIsCopied =
+                System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
 
         public DbSet<Cliente> Clientes { get; set; }
