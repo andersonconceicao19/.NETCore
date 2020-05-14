@@ -10,6 +10,8 @@ namespace ProjetoModeloDDD.Infra.Data.Context
 {
     public class ProjetoModeloContext : DbContext
     {
+        //1 hora e 04 min. 
+
         public ProjetoModeloContext()
             : base("ProjetoModeloDDD")
         {
