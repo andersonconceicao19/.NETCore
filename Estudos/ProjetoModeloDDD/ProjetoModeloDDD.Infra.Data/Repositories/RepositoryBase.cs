@@ -15,6 +15,7 @@ namespace ProjetoModeloDDD.Infra.Data.Repositories
         protected ProjetoModeloContext _context = new ProjetoModeloContext();
        
 
+
         public IEnumerable<TEntity> GetAll()
         {
             return _context.Set<TEntity>().ToList();
@@ -26,20 +27,24 @@ namespace ProjetoModeloDDD.Infra.Data.Repositories
         public void Add(TEntity Obj)
         {
             _context.Set<TEntity>().Add(Obj);
-            _context.SaveChanges();
+            SaveChange();
         }
 
 
         public void Remove(TEntity obj)
         {
             _context.Set<TEntity>().Remove(obj);
-            _context.SaveChanges();
+            SaveChange();
         }
 
         public void Update(TEntity obg)
         {
             _context.Entry(obg).State = EntityState.Modified;
-            _context.SaveChanges();
+            SaveChange();
+        }
+        public async Task<int> SaveChange()
+        {
+            return await _context.SaveChangesAsync();
         }
         public void Dispose()
         {

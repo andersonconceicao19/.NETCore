@@ -9,7 +9,7 @@ namespace ProjetoModeloDDD.MVC.ViewModels
     public class ClienteViewModel
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required(ErrorMessage = "Preencha o nome")]
         [MaxLength(100, ErrorMessage = "Maximo de {0} caracter")]

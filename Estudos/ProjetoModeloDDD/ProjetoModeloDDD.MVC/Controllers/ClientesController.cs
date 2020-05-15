@@ -15,24 +15,16 @@ namespace ProjetoModeloDDD.MVC.Controllers
     public class ClientesController : Controller
     {
         private readonly ClienteRepository _clienteRepository = new ClienteRepository();
-        protected readonly IMapper _mapper;
-
-        public ClientesController()
-        {
-
-        }
-
-
-    
-        
+       
+        // Parou Em 1h50min.
 
         // GET: Clientes
         [Route("Clientes")]
         public ActionResult Index()
         {
-           // var clienteviewmodel = Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(_clienteRepository.GetAll());
+          var clienteviewmodel = Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(_clienteRepository.GetAll());
             
-            return View(_clienteRepository.GetAll());
+            return View(clienteviewmodel);
         }
 
         // GET: Clientes/Details/5
@@ -42,7 +34,7 @@ namespace ProjetoModeloDDD.MVC.Controllers
         }
 
         // GET: Clientes/Create
-
+      
         public ActionResult Create()
         {
             return View();
@@ -54,7 +46,7 @@ namespace ProjetoModeloDDD.MVC.Controllers
         {
            if(ModelState.IsValid)
             {
-                var clientedomain = _mapper.Map<ClienteViewModel, Cliente>(clienteViewModel);
+                var clientedomain = Mapper.Map<ClienteViewModel, Cliente>(clienteViewModel);
                 _clienteRepository.Add(clientedomain);
 
                 return RedirectToAction("Index");

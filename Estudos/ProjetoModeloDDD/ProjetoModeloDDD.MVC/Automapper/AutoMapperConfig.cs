@@ -5,12 +5,17 @@ using ProjetoModeloDDD.MVC.ViewModels;
 
 namespace ProjetoModeloDDD.MVC.Automapper
 {
-    public class AutoMapperConfig : Profile
+    public class AutoMapperConfig
     {
-        public AutoMapperConfig()
+        
+        public static void RegisterMappings()
         {
-            CreateMap<Cliente, ClienteViewModel>().ReverseMap();
-            CreateMap<Produto, ProdutoViewModel>().ReverseMap();
+            Mapper.Initialize(x =>
+            {
+                x.AddProfile<ViewModelToViewDomain>();
+                x.AddProfile<DomainToViewModel>();
+               
+            });
         }
 
 
