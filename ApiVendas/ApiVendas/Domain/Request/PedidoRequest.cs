@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ApiVendas.Models;
+using System;
 
-namespace ApiVendas.Models
+namespace ApiVendas.Domain.Request
 {
-    public class Pedidos
+    public class PedidoRequest
     {
+
         public int Num_Pedido { get; set; }
         public DateTime DataPedido { get; set; }
         public string TipoPedido { get; set; }
