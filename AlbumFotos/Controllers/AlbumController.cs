@@ -7,16 +7,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AlbumFotos.Context;
 using AlbumFotos.Models;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using System.Runtime.CompilerServices;
 
 namespace AlbumFotos.Controllers
 {
     public class AlbumController : Controller
     {
         private readonly datacontext _context;
-
-        public AlbumController(datacontext context)
+        private readonly IHostingEnvironment _hostingEnvironment;
+        public AlbumController(datacontext context, IHostingEnvironment hostingEnvironment)
         {
             _context = context;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         // GET: Album
@@ -52,10 +57,20 @@ namespace AlbumFotos.Controllers
        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Destino,FotoTopo,Inicio,Fim")] Album album)
+        public async Task<IActionResult> Create([Bind("Id,Destino,FotoTopo,Inicio,Fim")] Album album, IFormFile arquivo)
         {
             if (ModelState.IsValid)
             {
+                var linkUpload = Path.Combine(_hostingEnvironment.WebRootPath, "Imagens");
+                if(arquivo != null)
+                {
+                    using( var filestream = new FileStream(Path.Combine(linkUpload, arquivo.FileName), FileMode.Create))
+                    {
+                        await arquivo.CopyToAsync(filestream);
+                        album.FotoTopo = "~/Imagens" + arquivo.FileName;
+                    }
+                }
+
                 album.Id = Guid.NewGuid();
                 _context.Add(album);
                 await _context.SaveChangesAsync();
@@ -77,23 +92,40 @@ namespace AlbumFotos.Controllers
             {
                 return NotFound();
             }
+
+            TempData["FotoTopo"] = album.FotoTopo;
             return View(album);
         }
 
        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Destino,FotoTopo,Inicio,Fim")] Album album)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Destino,FotoTopo,Inicio,Fim")] Album album, IFormFile arquivo)
         {
             if (id != album.Id)
             {
                 return NotFound();
             }
 
+            if (String.IsNullOrEmpty(album.FotoTopo))
+            {
+                album.FotoTopo = TempData["FotoTopo"].ToString();
+            }
+
             if (ModelState.IsValid)
             {
                 try
                 {
+                    var linkupdate = Path.Combine(_hostingEnvironment.WebRootPath, "Imagens");
+
+                    if(arquivo != null)
+                    {
+                        using (var filestream = new FileStream(Path.Combine(linkupdate, arquivo.FileName), FileMode.Create))
+                        {
+                            await arquivo.CopyToAsync(filestream);
+                            album.FotoTopo = "~/Imagens" + arquivo.FileName;
+                        }
+                    }
                     _context.Update(album);
                     await _context.SaveChangesAsync();
                 }

@@ -14,7 +14,7 @@ namespace AlbumFotos.Models
         public string Destino { get; set; }
 
 
-        [Required(ErrorMessage = "Campo obrigatório")]
+      
         public string  FotoTopo { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
