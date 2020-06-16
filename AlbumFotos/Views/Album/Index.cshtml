@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AlbumFotos.Models.Album>
+
+@{
+    ViewData["Title"] = "Album de foto";
+}
+
+
+
+    <div class="listaDestino">
+        <div class="container">
+            <p>
+                <a asp-action="Create" class="waves-effect btn-small">Novo Album</a>
+            </p>
+            <table class="table highlight hover responsive-table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Destino)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Inicio)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Fim)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Destino)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Inicio)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fim)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn-small darken-2 blue ">Editar</a> |
+                                <a asp-action="Details" asp-route-id="@item.Id"  class="btn-small darken-2 orange ">Detalhes</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id"  class="btn-small darken-2 red ">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
