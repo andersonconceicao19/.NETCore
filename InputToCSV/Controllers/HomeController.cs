@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using InputToCSV.Models;
+using System.IO;
+using System.Text;
 
 namespace InputToCSV.Controllers
 {
@@ -23,15 +25,26 @@ namespace InputToCSV.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Convert(string name, string age)
         {
-            return View();
-        }
+            
+            StringBuilder stringBuilder = new StringBuilder();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            stringBuilder.Append($"Nome;Idade;{ name };{ age }");
+
+            /*
+                Se tivesse de fazer apartir de uma lista que viesse do backend, bastava fazer a adição num For/Forech. E.g:
+                
+               foreach (var item in collection)
+                {
+                    stringBuilder.append($"collection.name;collection.age"  ... concatena itens conforme coleção ... )
+                }
+
+             */
+
+
+
+            return File(Encoding.ASCII.GetBytes(stringBuilder.ToString()), "text/csv", "dados.csv");
         }
     }
 }
