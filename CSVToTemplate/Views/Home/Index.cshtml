@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <form asp-action="Listar" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file"  name="arquivo" />
+                </div>
+                <div class="form-group">
+                    <button type="submit"> Verificar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr />
+
+</div>
