@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CSVToTemplate.Models.Pessoa>
+﻿@model CSVToTemplate.Models.Pessoa
 
 @{
     ViewData["Title"] = "Listar";
@@ -19,15 +19,14 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => Model.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Age)
+                @Html.DisplayFor(modelItem => Model.Age)
             </td>
         </tr>
-}
+
     </tbody>
 </table>

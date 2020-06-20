@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Globalization;
 using CSVToTemplate.Models;
-
+using System;
 
 namespace CSVToTemplate.Controllers
 {
@@ -44,13 +44,17 @@ namespace CSVToTemplate.Controllers
                             pessoas.Age = linha[i];
                         }
                     }
+                    sr.Close();
+                    return View(pessoas);
                 }
-                return View();
+               
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 return RedirectToAction("Index");
             }
+
+          
 
         }
         
