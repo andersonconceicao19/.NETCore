@@ -20,13 +20,13 @@ namespace Shop.Controllers
         [HttpGet("")]
         public async Task<ActionResult<List<Category>>> Get()
         {
-            return Ok(await _context.Categories.ToListAsync());
+            return Ok(await _context.Categories.AsNoTracking().ToListAsync());
         }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Category>> GetbyId(int id)
         {
-            var result = await _context.Categories.FindAsync(id);
+            var result = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
             if (result == null) return NotFound();            
 
             return Ok(result);
@@ -55,7 +55,7 @@ namespace Shop.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var result = await _context.Categories.FindAsync(id);
+            var result = await _context.Categories.FirstOrDefaultAsync(x => x.Id == id);
             if (result == null)
             {
                 return NotFound();
