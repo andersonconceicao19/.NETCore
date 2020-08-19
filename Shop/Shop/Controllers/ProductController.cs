@@ -10,7 +10,7 @@ using Shop.Models;
 
 namespace Shop.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("v1/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly DataContext _context;

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("v1/[controller]")]
     public class UserController : Controller
     {
         private readonly DataContext _context;
