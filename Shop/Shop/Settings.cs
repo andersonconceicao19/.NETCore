@@ -7,6 +7,6 @@ namespace Shop
 {
     public static class Settings
     {
-        public static string Secret = "daafd680-4e2b-47d2-bf28-87040fa20e14";
+        public static string Secret = "edaf7d8863b48e197b9287d492b708e";
     }
 }
