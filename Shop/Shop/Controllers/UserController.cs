@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Shop.Context;
 using Shop.Models;
@@ -17,6 +18,12 @@ namespace Shop.Controllers
         public UserController(DataContext context)
         {
             _context = context;
+        }
+        [HttpGet("users")]
+        [Authorize(Roles = "Gerente")]
+        public async Task<ActionResult> Get()
+        {
+            return Ok(await _context.Users.AsNoTracking().ToListAsync());
         }
         [HttpPost("")]
         public async Task<ActionResult<User>> Post([FromBody] User model)
@@ -44,6 +51,7 @@ namespace Shop.Controllers
             };
         }
 
+       
 
     }
 }
