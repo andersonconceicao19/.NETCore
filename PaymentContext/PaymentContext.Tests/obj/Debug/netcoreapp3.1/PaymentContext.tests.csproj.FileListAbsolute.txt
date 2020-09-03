@@ -92,3 +92,7 @@ C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\obj\Debug\ne
 C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\obj\Debug\netcoreapp3.1\PaymentContext.tests.dll
 C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\obj\Debug\netcoreapp3.1\PaymentContext.tests.pdb
 C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\obj\Debug\netcoreapp3.1\PaymentContext.tests.genruntimeconfig.cache
+C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\bin\Debug\netcoreapp3.1\PaymentContext.Domain.dll
+C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\bin\Debug\netcoreapp3.1\PaymentContext.shared.dll
+C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\bin\Debug\netcoreapp3.1\PaymentContext.Domain.pdb
+C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\bin\Debug\netcoreapp3.1\PaymentContext.shared.pdb

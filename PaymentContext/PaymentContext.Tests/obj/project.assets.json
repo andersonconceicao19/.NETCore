@@ -1634,6 +1634,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "PaymentContext.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "PaymentContext.shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PaymentContext.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaymentContext.Domain.dll": {}
+        }
+      },
+      "PaymentContext.shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/PaymentContext.shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaymentContext.shared.dll": {}
+        }
       }
     }
   },
@@ -5705,6 +5728,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "PaymentContext.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PaymentContext.Domain/PaymentContext.Domain.csproj",
+      "msbuildProject": "../PaymentContext.Domain/PaymentContext.Domain.csproj"
+    },
+    "PaymentContext.shared/1.0.0": {
+      "type": "project",
+      "path": "../PaymentContext.shared/PaymentContext.shared.csproj",
+      "msbuildProject": "../PaymentContext.shared/PaymentContext.shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5712,6 +5745,8 @@
       "MSTest.TestAdapter >= 2.1.0",
       "MSTest.TestFramework >= 2.1.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
+      "PaymentContext.Domain >= 1.0.0",
+      "PaymentContext.shared >= 1.0.0",
       "coverlet.collector >= 1.2.0"
     ]
   },
@@ -5721,11 +5756,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.Tests\\PaymentContext.Tests.csproj",
-      "projectName": "PaymentContext.Tests",
-      "projectPath": "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.Tests\\PaymentContext.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.tests\\PaymentContext.tests.csproj",
+      "projectName": "PaymentContext.tests",
+      "projectPath": "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.tests\\PaymentContext.tests.csproj",
       "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.Tests\\obj\\",
+      "outputPath": "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5740,7 +5775,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.Domain\\PaymentContext.Domain.csproj": {
+              "projectPath": "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.Domain\\PaymentContext.Domain.csproj"
+            },
+            "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.shared\\PaymentContext.shared.csproj": {
+              "projectPath": "C:\\Users\\ander\\Desktop\\.NETCore\\PaymentContext\\PaymentContext.shared\\PaymentContext.shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
