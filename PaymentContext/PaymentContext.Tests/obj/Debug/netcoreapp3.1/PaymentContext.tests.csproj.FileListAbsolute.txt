@@ -96,3 +96,4 @@ C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\bin\Debug\ne
 C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\bin\Debug\netcoreapp3.1\PaymentContext.shared.dll
 C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\bin\Debug\netcoreapp3.1\PaymentContext.Domain.pdb
 C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\bin\Debug\netcoreapp3.1\PaymentContext.shared.pdb
+C:\Users\ander\Desktop\.NETCore\PaymentContext\PaymentContext.tests\bin\Debug\netcoreapp3.1\Flunt.dll
