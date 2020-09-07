@@ -1,16 +1,22 @@
 using System;
 using PaymentContext.Domain.Enums;
+using PaymentContext.Shared.Commands;
 
 namespace PaymentContext.Domain.Commands
 {
-    public class CreatePayPalSubscriptionCommand
+    public class CreateBoletoSubscriptionCommand : ICommands    
     {
+        public CreateBoletoSubscriptionCommand()
+        {
+        }
+
         public string FirstName { get; set; }
         public string LastName { get;  set; }
         public string Email { get;  set; }
         public string Document { get;  set; }
 
-        public string TransactionConde { get;  set; }
+        public string BarCode { get; private set; }
+        public string BoletoNumber { get; private set; }
         
         public string PaymentNumber { get;  set; }
         public DateTime PaidDate { get;  set; }
@@ -31,6 +37,16 @@ namespace PaymentContext.Domain.Commands
         public string State { get; set; }
         public string ZipCode { get;  set; }
         public string Country { get;  set; }
+
+        public bool Invalid()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Validate()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
