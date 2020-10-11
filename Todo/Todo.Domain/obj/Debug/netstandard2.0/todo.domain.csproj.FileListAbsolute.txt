@@ -1,0 +1,9 @@
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.domain\bin\Debug\netstandard2.0\todo.domain.deps.json
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.domain\bin\Debug\netstandard2.0\todo.domain.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.domain\bin\Debug\netstandard2.0\todo.domain.pdb
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.domain\obj\Debug\netstandard2.0\todo.domain.csprojAssemblyReference.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.domain\obj\Debug\netstandard2.0\todo.domain.csproj.CoreCompileInputs.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.domain\obj\Debug\netstandard2.0\todo.domain.AssemblyInfoInputs.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.domain\obj\Debug\netstandard2.0\todo.domain.AssemblyInfo.cs
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.domain\obj\Debug\netstandard2.0\todo.domain.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.domain\obj\Debug\netstandard2.0\todo.domain.pdb
