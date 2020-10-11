@@ -1,0 +1,14 @@
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\bin\Debug\netcoreapp2.2\todo.tests.deps.json
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\bin\Debug\netcoreapp2.2\todo.tests.runtimeconfig.json
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\bin\Debug\netcoreapp2.2\todo.tests.runtimeconfig.dev.json
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\bin\Debug\netcoreapp2.2\todo.tests.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\bin\Debug\netcoreapp2.2\todo.tests.pdb
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\obj\Debug\netcoreapp2.2\todo.tests.csprojAssemblyReference.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\obj\Debug\netcoreapp2.2\todo.tests.csproj.CoreCompileInputs.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\obj\Debug\netcoreapp2.2\todo.tests.AssemblyInfoInputs.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\obj\Debug\netcoreapp2.2\todo.tests.AssemblyInfo.cs
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\obj\Debug\netcoreapp2.2\todo.tests.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.tests\obj\Debug\netcoreapp2.2\todo.tests.pdb

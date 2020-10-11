@@ -1,0 +1,9 @@
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.infra\bin\Debug\netstandard2.0\todo.infra.deps.json
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.infra\bin\Debug\netstandard2.0\todo.infra.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.infra\bin\Debug\netstandard2.0\todo.infra.pdb
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.infra\obj\Debug\netstandard2.0\todo.infra.csprojAssemblyReference.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.infra\obj\Debug\netstandard2.0\todo.infra.csproj.CoreCompileInputs.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.infra\obj\Debug\netstandard2.0\todo.infra.AssemblyInfoInputs.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.infra\obj\Debug\netstandard2.0\todo.infra.AssemblyInfo.cs
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.infra\obj\Debug\netstandard2.0\todo.infra.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.infra\obj\Debug\netstandard2.0\todo.infra.pdb

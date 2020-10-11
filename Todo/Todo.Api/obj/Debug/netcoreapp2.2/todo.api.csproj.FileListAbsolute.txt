@@ -1,0 +1,14 @@
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\bin\Debug\netcoreapp2.2\todo.api.deps.json
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\bin\Debug\netcoreapp2.2\todo.api.runtimeconfig.json
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\bin\Debug\netcoreapp2.2\todo.api.runtimeconfig.dev.json
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\bin\Debug\netcoreapp2.2\todo.api.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\bin\Debug\netcoreapp2.2\todo.api.pdb
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\obj\Debug\netcoreapp2.2\todo.api.csprojAssemblyReference.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\obj\Debug\netcoreapp2.2\todo.api.csproj.CoreCompileInputs.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\obj\Debug\netcoreapp2.2\todo.api.RazorAssemblyInfo.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\obj\Debug\netcoreapp2.2\todo.api.RazorAssemblyInfo.cs
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\obj\Debug\netcoreapp2.2\todo.api.AssemblyInfoInputs.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\obj\Debug\netcoreapp2.2\todo.api.AssemblyInfo.cs
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\obj\Debug\netcoreapp2.2\todo.api.RazorTargetAssemblyInfo.cache
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\obj\Debug\netcoreapp2.2\todo.api.dll
+C:\Users\ander\Desktop\Uteis\.NETCore\todo\todo.api\obj\Debug\netcoreapp2.2\todo.api.pdb
