@@ -1,8 +1,6 @@
-using System;
-
-namespace CQRS_TO_DO.Domain
+namespace CQRS_TO_DO.Domain.Queries
 {
-    public class AddItemsInputCommand
+    public class GetItemsQueryViewModel
     {
         public string Nome { get; set; }
         public double Valor { get; set; }

@@ -2,38 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CQRS_TO_DO.Domain;
+using CQRS_TO_DO.Domain.Queries;
+using CQRS_TO_DO.Entity;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace CQRS_TO_DO.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        private readonly IMediator _mediator;
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(IMediator Mediator)
         {
-            _logger = logger;
+            _mediator = Mediator;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public ActionResult<List<Object>> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var result = _mediator.Send(new GetItemsQuery());
+            
+            return Ok(result);
+        }
+        [HttpPost]
+        public ActionResult Post([FromBody]AddItemsInputCommand aic)
+        {
+            var it = new AddItemsCommand(aic.Nome, aic.Valor);            
+            _mediator.Send(it);
+            return Ok();
         }
     }
 }
